@@ -18,4 +18,15 @@ def bookDetails(request, id):
         "book" : books
     }
     return HttpResponse(template.render(context, request))
+
+def mainPage(request):
+    template = loader.get_template("main.html")
+    return HttpResponse(template.render())
+
+def testing(request):
+    template = loader.get_template("testing.html")
+    context = {
+        "fruits" : ["Lakhs","Crores","Dinams","Dollars","Ruppes","Merci"]
+    }
+    return HttpResponse(template.render(context, request))
     

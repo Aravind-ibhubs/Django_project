@@ -1,0 +1,14 @@
+{% extends "mainPage.html" %}
+
+{% block title %}
+    Testing page
+{% endblock %}
+
+{% block content %}
+<h1>Testing page</h1>
+{% for fruit in fruits %}
+    <ol>
+        <li>{{ fruit }}</li>
+    </ol>
+{% endfor %}
+{% endblock %}

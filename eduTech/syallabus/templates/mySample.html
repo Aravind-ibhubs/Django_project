@@ -1,12 +1,16 @@
-<!DOCTYPE html>
-<html>
-    <title>SYALLABUS</title>
-    <body>
-        <h1>Hello girls</h1>
-        <ol>
-            {% for i in myBooks %}
-                <li><a href="details/{{ i.id }}">{{ i.bookname }} by author {{ i.author }}</a></li>
-            {% endfor %} 
-        </ol>
-    </body>
-</html>
+{% extends "mainPage.html" %}
+
+{% block title %}
+    SYALLABUS
+{% endblock  %}
+
+{% block content %}
+<h1>Hello girls</h1>
+<ol>
+    {% for i in myBooks %}
+        <li><a href="details/{{ i.id }}">{{ i.bookname }} by author {{ i.author }}</a></li>
+    {% endfor %} 
+</ol>
+<button><a href="/">Home</a></button>
+{% endblock %}
+

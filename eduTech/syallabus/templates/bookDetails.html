@@ -1,14 +1,18 @@
-<html>
-    <title>{{ book.bookname }}</title>
-    <body>
-        <h1>Details of {{ book.bookname }}</h1>
-        <ul>
-            <li>Name : {{ book.bookname }}</li>
-            <li>Author : {{ book.author}} </li>
-            <li>Cost : Rs . {{ book.cost }} / -</li>
-            <li>Published: {{ book.published}}</li>
-        </ul>
+{% extends "mainPage.html" %}
 
-        <h2><a href="/syallabus">Back</a></h2>
-    </body>
-</html>
+{% block title %}
+    {{ book.bookname }}
+{% endblock  %}
+    
+{% block content %}
+    <h1>Details of {{ book.bookname }}</h1>
+    <ul>
+        <li>Name : {{ book.bookname }}</li>
+        <li>Author : {{ book.author}} </li>
+        <li>Cost : Rs . {{ book.cost }} / -</li>
+        <li>Published: {{ book.published}}</li>
+    </ul>
+
+    <h2><a href="/syallabus">Back</a></h2>
+{% endblock %}
+    

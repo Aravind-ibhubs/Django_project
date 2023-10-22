@@ -40,3 +40,5 @@ An app is a web application that has a specific meaning in your project, like a 
     2. updating value = `x['cost'] = 234`
     3. Saving the cost  = `x.save()`
 
+## Creating the admin user
+code : `py manage.py createsuperuser`
